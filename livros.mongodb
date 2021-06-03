@@ -1,0 +1,12 @@
+use('bookread')
+
+db.livros.insertOne(
+  {"nome":"Orgulho e Preconceito",
+  "autor":"Jane Austen",
+  "ultima_pagina_lida":10,
+  "status":"não concluído",
+  "imagem":{
+    "url":"https://cdn.maioresemelhores.com/imagens/orgulho-e-preconceito-1-cke.jpg"
+    }
+  }
+)

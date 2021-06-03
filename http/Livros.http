@@ -1,0 +1,88 @@
+@baseURL = http://localhost:4000
+@id = 60b7702cb1630a0670bd3826
+
+###
+// GET - Lista livros
+GET {{baseURL}}/livros
+Content-Type: application/json
+
+###
+// GET - Lista livros - INVÁLIDO
+GET {{baseURL}}/livro
+Content-Type: application/json
+
+###
+// GET - Lista livro por id
+GET {{baseURL}}/livros/{{id}}
+Content-Type: application/json
+
+###
+// GET - Lista apenas uma categoria pelo id - INVÁLIDO
+GET {{baseURL}}/livros/44
+Content-Type: application/json
+
+###
+// POST - Inclui livro
+POST {{baseURL}}/livros
+Content-Type: application/json
+
+{
+    "nome": "Ladrão de Casaca",
+    "autor": "Maurice Leblanc",
+    "ultima_pagina_lida": 1,
+    "status": "Não Concluído"
+}
+
+###
+// POST - Inclui livro - INVÁLIDO
+POST {{baseURL}}/livros
+Content-Type: application/json
+
+{
+    "nome": "Orgulho e preconceito",
+    "autor": "Jane Austen",
+    "status": "Não Concluído",
+    "ultima_pagina_lida": 1,
+    "imagem": {
+        "url":"https://images-na.ssl-images-amazon.com/images/I/511c2+CJ30L._SX326_BO1,204,203,200_.jpg"
+    }
+}
+
+
+### 
+// DELETE - Apaga uma livro através do id informado
+DELETE {{baseURL}}/livros/{{id}}
+Content-Type: application/json
+
+### 
+// DELETE - Apaga uma livro com id - INVÁLIDO
+DELETE {{baseURL}}/livros/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Altera uma livro pelo ID
+PUT {{baseURL}}/livros
+Content-Type: application/json
+
+{
+    "_id": "60b7702cb1630a0670bd3826", 
+    "nome": "Ladrão de Casaca",
+    "autor": "Maurice Leblanc",
+    "status": "Não Concluído",
+    "imagem": {
+        "url":"https://a-static.mlcdn.com.br/1500x1500/livro-arsene-lupin-o-ladrao-de-casaca/livrariauniversodolivro/595p/745171392f44202a8a94ff670cc2f176.jpg"
+    }
+}
+
+
+###
+// PUT - Altera uma livro pelo ID - INVÁLIDO
+PUT {{baseURL}}/livros
+Content-Type: application/json
+
+{
+    "_id": "111", 
+    "nome": "Orgulho e preconceito",
+    "autor": "Jane Austen",
+    "status": "concluido"
+}
