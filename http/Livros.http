@@ -1,5 +1,5 @@
 @baseURL = http://localhost:4000
-@id = 60b7702cb1630a0670bd3826
+@id = 60bbe781d91e21081ccf1901
 
 ###
 // GET - Lista livros
@@ -29,8 +29,10 @@ Content-Type: application/json
 {
     "nome": "Ladrão de Casaca",
     "autor": "Maurice Leblanc",
-    "ultima_pagina_lida": 1,
-    "status": "Não Concluído"
+    "genero": "Romance policial",
+    "ano_lancamento": 1907,
+    "url_img":"https://m.media-amazon.com/images/I/51oKfp5K4YL._SY346_.jpg",
+    "link_compra":"https://www.americanas.com.br/produto/3319251961?opn=YSMESP&sellerid=02"
 }
 
 ###
@@ -39,13 +41,12 @@ POST {{baseURL}}/livros
 Content-Type: application/json
 
 {
-    "nome": "Orgulho e preconceito",
+    "nomee": "Orgulho e preconceito",
     "autor": "Jane Austen",
-    "status": "Não Concluído",
-    "ultima_pagina_lida": 1,
-    "imagem": {
-        "url":"https://images-na.ssl-images-amazon.com/images/I/511c2+CJ30L._SX326_BO1,204,203,200_.jpg"
-    }
+    "genero": "Romance de amor",
+    "ano_lancamento": 1813,
+    "url_img":"https://images-na.ssl-images-amazon.com/images/I/511c2+CJ30L._SY344_BO1,204,203,200_.jpg",
+    "link_compra":"https://www.americanas.com.br/produto/133434582?opn=YSMESP&sellerid=02"
 }
 
 
@@ -68,10 +69,7 @@ Content-Type: application/json
     "_id": "60b7702cb1630a0670bd3826", 
     "nome": "Ladrão de Casaca",
     "autor": "Maurice Leblanc",
-    "status": "Não Concluído",
-    "imagem": {
-        "url":"https://a-static.mlcdn.com.br/1500x1500/livro-arsene-lupin-o-ladrao-de-casaca/livrariauniversodolivro/595p/745171392f44202a8a94ff670cc2f176.jpg"
-    }
+    "url_img":"https://a-static.mlcdn.com.br/1500x1500/livro-arsene-lupin-o-ladrao-de-casaca/livrariauniversodolivro/595p/745171392f44202a8a94ff670cc2f176.jpg"
 }
 
 
@@ -83,6 +81,5 @@ Content-Type: application/json
 {
     "_id": "111", 
     "nome": "Orgulho e preconceito",
-    "autor": "Jane Austen",
-    "status": "concluido"
+    "autor": "Jane Austen"
 }

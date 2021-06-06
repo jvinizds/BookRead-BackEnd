@@ -1,12 +1,12 @@
 use('bookread')
 
 db.livros.insertOne(
-  {"nome":"Orgulho e Preconceito",
-  "autor":"Jane Austen",
-  "ultima_pagina_lida":10,
-  "status":"não concluído",
-  "imagem":{
-    "url":"https://cdn.maioresemelhores.com/imagens/orgulho-e-preconceito-1-cke.jpg"
-    }
+  {
+    "nome": "Ladrão de Casaca",
+    "autor": "Maurice Leblanc",
+    "genero": "Romance policial",
+    "ano_lancamento": "1907",
+    "url_img":"https://images-americanas.b2w.io/produtos/01/00/img/3268801/4/3268801482_1GG.jpg",
+    "link_compra":"https://www.americanas.com.br/produto/3268801474?opn=YSMESP&sellerid=71424246000139"
   }
 )

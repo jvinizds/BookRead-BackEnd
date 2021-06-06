@@ -42,6 +42,10 @@ router.get("/", async(req, res) => {
  const validaLivro = [
     check('nome','Nome do livro é obrigatório').not().isEmpty(),
     check('autor','Nome do autor é obrigatório').not().isEmpty(),
+    check('genero','Genero é obrigatório').not().isEmpty(),
+    check('ano_lancamento','Ano de lançamento é obrigatório').not().isEmpty(),
+    check('url_img','URL da imagem é obrigatório').not().isEmpty(),
+    check('link_compra','Link para compra é obrigatório').not().isEmpty()
 ]
 
 router.post('/', validaLivro,
