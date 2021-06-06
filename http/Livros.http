@@ -1,4 +1,4 @@
-@baseURL = http://localhost:4000
+@baseURL = https://bookread-backend.herokuapp.com
 @id = 60bbe781d91e21081ccf1901
 
 ###
