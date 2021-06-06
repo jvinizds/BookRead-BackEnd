@@ -12,16 +12,6 @@ GET {{baseURL}}/livro
 Content-Type: application/json
 
 ###
-// GET - Lista livro por id
-GET {{baseURL}}/livros/{{id}}
-Content-Type: application/json
-
-###
-// GET - Lista apenas uma categoria pelo id - INVÁLIDO
-GET {{baseURL}}/livros/44
-Content-Type: application/json
-
-###
 // POST - Inclui livro
 POST {{baseURL}}/livros
 Content-Type: application/json
